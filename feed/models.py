@@ -16,6 +16,8 @@ class Article(models.Model):
     )
 
     title = models.CharField(max_length=200)
+    subtitle = models.CharField(max_length=200)
+    modified_at = models.DateField(auto_now_add=True)
     content = models.TextField()
     category = models.CharField(
         max_length=2,
